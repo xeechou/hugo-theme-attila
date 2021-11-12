@@ -12,7 +12,7 @@
 
     {{/* Execute style as template in order to change the target path */}}
     {{ $css := resources.Get "sass/style.scss" | resources.ExecuteAsTemplate "css/style.css" . | toCSS | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}" />
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" />
 
     {{ block "head" . }}
       {{/* Empty block */}}
@@ -54,7 +54,7 @@
     {{ $nProgress := resources.Get "js/libs/nprogress.js" }}
     {{ $script := resources.Get "js/script.js" }}
     {{ $js := slice $highlight $jquery $fitVids $history $nProgress $script | resources.Concat "js/script.js" }}
-    <script src="{{ $js.Permalink }}"></script>
+    <script src="{{ $js.RelPermalink }}"></script>
 
     {{ block "foot" . }}
       {{/* Empty block */}}
