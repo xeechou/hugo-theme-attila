@@ -6,8 +6,9 @@
   <span class="progress-bar"></span>
 </div>
 
+{{ $hasPostCover := isset .Site.Params "postcover" }}
 {{ $hasCover := isset .Params "cover" }}
-<header id="post-header"{{ if $hasCover }} class="has-cover"{{ end }}>
+<header id="post-header"{{ if $hasPostCover }} class="has-cover"{{ end }}>
   <div class="inner">
     {{ partial "subnav" . }}
     <h1 class="post-title">{{ .Title }}</h1>
@@ -20,6 +21,8 @@
 
     {{ if $hasCover }}
       <div class="post-cover cover" style="background-image: url('{{ .Params.cover | absURL }}');"></div>
+    {{ else if $hasPostCover }}
+      <div class="post-cover cover" style="background-image: url('{{ .Site.Params.postcover | absURL }}');"></div>
     {{ end }}
   </div>
 </header>
