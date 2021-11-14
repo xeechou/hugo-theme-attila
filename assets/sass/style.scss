@@ -216,6 +216,14 @@ dl dd {
 mark {
     background-color: $color-yellow-100;
 }
+
+code.has-jax {
+	-webkit-font-smoothing: antialiased;
+	background: inherit !important;
+	border: none !important;
+	font-size: 100%;
+}
+
 code, tt {
 	position: relative;
 	margin: 0 0.334em;

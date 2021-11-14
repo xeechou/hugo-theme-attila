@@ -9,11 +9,10 @@
 
     <meta name="HandheldFriendly" content="true" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     {{/* Execute style as template in order to change the target path */}}
     {{ $css := resources.Get "sass/style.scss" | resources.ExecuteAsTemplate "css/style.css" . | toCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" />
-
+    {{ if .Params.mathjax }}{{ partial "mathjax_support.html" . }}{{ end }}
     {{ block "head" . }}
       {{/* Empty block */}}
     {{ end }}
