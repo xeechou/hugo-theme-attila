@@ -5,6 +5,7 @@
 </div>
 
 {{ range .Paginator.Pages }}
+{{ if not .Params.static }}
   <article class="post{{ if .Params.featured }} featured{{ end }}">
     <div class="inner">
       <header class="post-header">
@@ -32,6 +33,7 @@
       </section>
     </div>
   </article>
+  {{ end }}
 {{ end }}
 
 {{ partial "pagination" . }}
