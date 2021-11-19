@@ -1,0 +1,19 @@
+      <footer id="footer">
+        <div class="inner">
+          <section class="credits">
+            <span class="credits-theme">
+              {{ $originalThemeHTML := "<a href=\"https://github.com/zutrinken/attila\">Attila</a>" }}
+              {{ $originalAuthorHTML := "<a href=\"https://zutrinken.com\" rel=\"nofollow\">zutrinken</a>" }}
+              {{ T "authorCredits" (dict "Name" $originalThemeHTML "Author" $originalAuthorHTML) | safeHTML }}
+              |
+              {{ $themeHTML := "<a href=\"https://github.com/xeechou/hugo-theme-attila\">hugo-theme-attila</a>" }}
+              {{ $authorHTML := "<a href=\"https://xeechou.net\" rel=\"nofollow\">xeechou</a>" }}
+              {{ T "authorCredits" (dict "Name" $themeHTML "Author" $authorHTML) | safeHTML }}
+            </span>
+            <span class="credits-software">
+              {{ $publisherHTML := "<a href=\"https://gohugo.io\">Hugo</a>" }}
+              {{ T "softwareCredits" (dict "Name" $publisherHTML) | safeHTML }}
+            </span>
+          </section>
+        </div>
+      </footer>
