@@ -1167,7 +1167,19 @@ img[src$="#full"] {
 	background-color: $color-social-googleplus;
 }
 .post-share .linkedin {
-    background-color: $color-social-linkedin;
+        background-color: $color-social-linkedin;
+}
+.post-share .wechat {
+        background-color: $color-social-wechat;
+}
+.post-share .weibo {
+       background-color: $color-social-weibo;
+}
+.post-share .qq {
+       background-color: $color-social-qq;
+}
+.post-share .reddit {
+       background-color: $color-social-reddit;
 }
 
 .post-tags {
