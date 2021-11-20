@@ -1,0 +1,24 @@
+      <aside class="post-nav">
+        <!-- exchange the navigation  -->
+        {{ with .PrevPage }}
+          <a class="post-nav-prev" href="{{ .RelPermalink }}">
+            <section class="post-nav-teaser">
+              <i class="icon-right-arrow"></i>
+              <h2 class="post-nav-title">{{ .Title }}</h2>
+              <p class="post-nav-excerpt">{{ .Summary }}</p>
+            </section>
+          </a>
+        {{ end }}
+
+          {{ with .NextPage }}
+          <a class="post-nav-next" href="{{ .RelPermalink }}">
+            <section class="post-nav-teaser">
+              <i class="icon-left-arrow"></i>
+              <h2 class="post-nav-title">{{ .Title }}</h2>
+              <p class="post-nav-excerpt">{{ .Summary }}</p>
+            </section>
+          </a>
+        {{ end }}
+
+        <div class="clear"></div>
+      </aside>
