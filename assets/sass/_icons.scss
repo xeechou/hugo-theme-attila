@@ -1,49 +1,73 @@
 @font-face {
-	font-family: 'icons';
-	src:	url('../font/icons.eot?58972676');
-	src:	url('../font/icons.eot?58972676#iefix') format('embedded-opentype'),
-			url('../font/icons.woff2?58972676') format('woff2'),
-			url('../font/icons.woff?58972676') format('woff'),
-			url('../font/icons.ttf?58972676') format('truetype'),
-			url('../font/icons.svg?58972676#icons') format('svg');
-	font-weight: normal;
-	font-style: normal;
+  font-family: 'icons';
+  src: url('../font/icons.eot?62044434');
+  src: url('../font/icons.eot?62044434#iefix') format('embedded-opentype'),
+       url('../font/icons.woff2?62044434') format('woff2'),
+       url('../font/icons.woff?62044434') format('woff'),
+       url('../font/icons.ttf?62044434') format('truetype'),
+       url('../font/icons.svg?62044434#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
- 
-[class^="ic-"]:before,
-[class*=" ic-"]:before {
-	font-family: 'icons';
-	font-style: normal;
-	font-weight: normal;
-	speak: none;
-	display: inline-block;
-	text-decoration: inherit;
-	width: 1em;
-	margin-right: .2em;
-	text-align: center;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1em;
-	margin-left: .2em;
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'icons';
+    src: url('../font/icons.svg?62044434#icons') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
-.ic-arrow-right:before { content: '\f105'; } /* '' */
-.ic-arrow-left:before { content: '\f104'; } /* '' */
-
-.ic-menu:before { content: '\e803'; } /* '' */
-.ic-rss:before { content: '\e807'; } /* '' */
-.ic-star:before { content: '\e808'; } /* '' */
-
-.ic-pencil:before { content: '\e802'; } /* '' */
-.ic-location:before { content: '\e805'; } /* '' */
-.ic-link:before { content: '\e806'; } /* '' */
-.ic-mail:before { content: '\e804'; } /* '' */
-
-.ic-twitter:before { content: '\f099'; } /* '' */
-.ic-facebook:before { content: '\f09a'; } /* '' */
-.ic-linkedin:before { content: '\f0e1'; } /* '' */
-.ic-googleplus:before { content: '\f0d5'; } /* '' */
-.ic-reddit:before { content: '\f281'; }
-.ic-wechat:before { content: '\f1d7'; }
-.ic-weibo:before { content: '\f18a'; }
-.ic-qq:before    { content: '\f1d6'; }
+.icon-left-arrow:before { content: '\e800'; } /* '' */
+.icon-right-arrow:before { content: '\e801'; } /* '' */
+.icon-pencil:before { content: '\e802'; } /* '' */
+.icon-link:before { content: '\e803'; } /* '' */
+.icon-globe:before { content: '\e804'; } /* '' */
+.icon-search:before { content: '\e805'; } /* '' */
+.icon-star:before { content: '\e806'; } /* '' */
+.icon-twitter:before { content: '\f099'; } /* '' */
+.icon-facebook:before { content: '\f09a'; } /* '' */
+.icon-rss:before { content: '\f09e'; } /* '' */
+.icon-menu:before { content: '\f0c9'; } /* '' */
+.icon-mail:before { content: '\f0e0'; } /* '' */
+.icon-linkedin:before { content: '\f0e1'; } /* '' */
+.icon-weibo:before { content: '\f18a'; } /* '' */
+.icon-qq:before { content: '\f1d6'; } /* '' */
+.icon-wechat:before { content: '\f1d7'; } /* '' */
+.icon-reddit-alien:before { content: '\f281'; } /* '' */

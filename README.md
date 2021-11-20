@@ -9,7 +9,7 @@ Attila is a minimalistic and simple content-focused theme, supporting a paginate
 Inside the folder of your Hugo site run:
 ```cmd
 $ cd themes/
-$ git clone https://github.com/vseventer/hugo-theme-attila
+$ git clone https://github.com/xeechou/hugo-theme-attila
 ```
 
 In your `config.toml` update the theme field to `hugo-theme-attila`.
@@ -44,8 +44,14 @@ featured = true # Display a featured star next to the post title.
 * Google Analytics support.
 * Sharing buttons.
 
+## Icon fonts
+Attila icon fonts is generated through [fontello](https://fontello.com/), I
+just picked the one I used. But you can add yours if you prefer.
+
+
 ## Limitations
-* Compared to the original, there is no support for author archives (see [#1](https://github.com/vseventer/hugo-theme-attila/issues/1)).
+* Compared to the original, there is no support for author archives (see
+  [#1](https://github.com/vseventer/hugo-theme-attila/issues/1)).
 * There is no RSS support (see [#2](https://github.com/vseventer/hugo-theme-attila/issues/2)).
 
 ## License

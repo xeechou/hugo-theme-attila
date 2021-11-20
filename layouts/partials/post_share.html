@@ -5,22 +5,22 @@
 
   {{ $twitter_href := printf "https://twitter.com/share?url=%s&text=%s" $url $title }}
   <a class="twitter" href="{{ $twitter_href }}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+    <i class="icon-twitter"></i><span class="hidden">Twitter</span>
   </a>
 
   {{ $facebook_href := printf "https://www.facebook.com/sharer.php?u=%s" $url}}
   <a class="facebook" href="{{ $facebook_href }}" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+    <i class="icon-facebook"></i><span class="hidden">Facebook</span>
   </a>
 
   {{ $linkedin_href := printf "https://www.linkedin.com/shareArticle?mini=true&url=%s&title=%s" $url $title }}
   <a class="linkedin" href="{{ $linkedin_href }}" onclick="window.open(this.href, 'linkedin-share', 'width=490,height=530');return false;">
-    <i class="ic ic-linkedin"></i><span class="hidden">linkedin</span>
+    <i class="icon-linkedin"></i><span class="hidden">linkedin</span>
   </a>
 
   {{ $reddit_href := printf "http://www.reddit.com/submit?url=%s&title=%s" $url $title}}
-  <a class="reddit" href="{{ $reddit_href }}" onclick="window.open(this.href, 'reddit-share', 'width=510,height=296');return false;">
-    <i class="ic ic-reddit"></i><span class="hidden">reddit</span>
+  <a class="reddit" href="{{ $reddit_href }}" onclick="window.open(this.href, 'reddit-share', width=580,height=500);return false;">
+    <i class="icon-reddit-alien"></i><span class="hidden">reddit</span>
   </a>
 
   <div class="clear"></div>

@@ -10,7 +10,7 @@
     {{ if not .IsHome }}
       <span id="home-button" class="nav-button">
         <a class="home-button" href="{{ .Site.BaseURL | absURL }}" title="{{ T "home" . }}">
-          <i class="ic ic-arrow-left"></i> {{ T "home" . }}
+          <i class="icon-left-arrow"></i> {{ T "home" . }}
         </a>
       </span>
     {{ end }}
@@ -18,7 +18,7 @@
   {{ if .Site.Params.navigation }}
   <span id="menu-button" class="nav-button">
     <a class="menu-button">
-      <i class="ic ic-menu"></i>
+      <i class="icon-menu"></i>
       {{ T "menu" . }}
     </a>
   </span>
