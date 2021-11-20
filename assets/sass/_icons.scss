@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'icons';
-  src: url('../font/icons.eot?62044434');
-  src: url('../font/icons.eot?62044434#iefix') format('embedded-opentype'),
-       url('../font/icons.woff2?62044434') format('woff2'),
-       url('../font/icons.woff?62044434') format('woff'),
-       url('../font/icons.ttf?62044434') format('truetype'),
-       url('../font/icons.svg?62044434#icons') format('svg');
+  src: url('../font/icons.eot?67260899');
+  src: url('../font/icons.eot?67260899#iefix') format('embedded-opentype'),
+       url('../font/icons.woff2?67260899') format('woff2'),
+       url('../font/icons.woff?67260899') format('woff'),
+       url('../font/icons.ttf?67260899') format('truetype'),
+       url('../font/icons.svg?67260899#icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'icons';
-    src: url('../font/icons.svg?62044434#icons') format('svg');
+    src: url('../font/icons.svg?67260899#icons') format('svg');
   }
 }
 */
@@ -61,13 +61,25 @@
 .icon-globe:before { content: '\e804'; } /* '' */
 .icon-search:before { content: '\e805'; } /* '' */
 .icon-star:before { content: '\e806'; } /* '' */
+.icon-down-big:before { content: '\e807'; } /* '' */
+.icon-left-big:before { content: '\e808'; } /* '' */
+.icon-right-big:before { content: '\e809'; } /* '' */
+.icon-up-big:before { content: '\e80a'; } /* '' */
+.icon-thumbs-up:before { content: '\e80b'; } /* '' */
+.icon-thumbs-down:before { content: '\e80c'; } /* '' */
 .icon-twitter:before { content: '\f099'; } /* '' */
 .icon-facebook:before { content: '\f09a'; } /* '' */
+.icon-github-circled:before { content: '\f09b'; } /* '' */
 .icon-rss:before { content: '\f09e'; } /* '' */
 .icon-menu:before { content: '\f0c9'; } /* '' */
 .icon-mail:before { content: '\f0e0'; } /* '' */
 .icon-linkedin:before { content: '\f0e1'; } /* '' */
+.icon-thumbs-up-alt:before { content: '\f164'; } /* '' */
+.icon-thumbs-down-alt:before { content: '\f165'; } /* '' */
 .icon-weibo:before { content: '\f18a'; } /* '' */
+.icon-slack:before { content: '\f198'; } /* '' */
+.icon-git:before { content: '\f1d3'; } /* '' */
 .icon-qq:before { content: '\f1d6'; } /* '' */
 .icon-wechat:before { content: '\f1d7'; } /* '' */
+.icon-share:before { content: '\f1e0'; } /* '' */
 .icon-reddit-alien:before { content: '\f281'; } /* '' */
