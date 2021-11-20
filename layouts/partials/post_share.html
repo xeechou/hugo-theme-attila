@@ -23,5 +23,35 @@
     <i class="icon-reddit-alien"></i><span class="hidden">reddit</span>
   </a>
 
+  {{ $wechat_href := printf "http://zixuephp.net/inc/qrcode_img.php?url=%s" $url }}
+  <a class="wechat" id="wechat-share-btn">
+    <i class="icon-wechat" id="wechat-share-icon"></i>
+    <div id="wechat-share-modal" class="modal">
+      <div class="modal-content">
+	<div id="wechat-share"></div>
+      </div>
+    </div>
+  </a>
+
+
+  <script type="text/javascript">
+    var modal = document.getElementById("wechat-share-modal");
+    var btn   = document.getElementById("wechat-share-btn");
+    var icon  = document.getElementById("wechat-share-icon");
+    var span  = document.getElementById("wechat-share-close");
+
+    //open it if we click on btn or icon, close it on second click
+    window.onclick = function(event) {
+      if (event.target == icon || event.target == btn)
+	modal.style.display = "block";
+      else if (modal.style.display == "block") {
+	modal.style.display = "none";
+      }
+    };
+
+    {{ $url := printf "%s" .RelPermalink | absLangURL }}
+    new QRCode(document.getElementById("wechat-share"), {{ $url }});
+  </script>
+
   <div class="clear"></div>
 </div>

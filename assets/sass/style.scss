@@ -7,6 +7,7 @@
 @import "icons";
 @import "fonts";
 @import "highlight";
+@import "modal";
 
 /* ==========================================================================
    Basics
@@ -1125,13 +1126,15 @@ img[src$="#full"] {
 
 .post-info {
 	margin-top: 2em;
-	overflow: hidden;
+	overflow: visible;
+	// z-index: 2;
 }
 .post-share {
-	max-width: 25%;
+	max-width: 32%;
 	float: right;
 }
 .post-share a {
+        position: relative;
 	display: block;
 	width: 2em;
 	height: 2em;
