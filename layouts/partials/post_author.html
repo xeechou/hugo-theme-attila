@@ -1,0 +1,10 @@
+      {{ if isset .Params "author" }}
+        <aside class="post-author">
+          <figure class="post-author-avatar avatar">
+          </figure>
+          <div class="post-author-bio">
+            <h4 class="post-author-name">{{ .Params.author }}</h4>
+          </div>
+          <div class="clear"></div>
+        </aside>
+      {{ end }}

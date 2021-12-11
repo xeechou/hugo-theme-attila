@@ -6,54 +6,16 @@
   <span class="progress-bar"></span>
 </div>
 
-{{ $hasPostCover := isset .Site.Params "postcover" }}
-{{ $hasCover := isset .Params "cover" }}
-<header id="post-header"{{ if $hasPostCover }} class="has-cover"{{ end }}>
-  <div class="inner">
-    {{ partial "subnav" . }}
-    <h1 class="post-title">{{ .Title }}</h1>
-    <span class="post-meta">
-      {{ if isset .Params "author" }}
-        {{ .Params.author }} |
-      {{ end }}
-      <time datetime="{{ dateFormat "2006-01-02" .Date }}">{{ dateFormat "02 Jan 2006" .Date }}</time>
-    </span>
-
-    {{ if $hasCover }}
-      <div class="post-cover cover" style="background-image: url('{{ .Params.cover | absURL }}');"></div>
-    {{ else if $hasPostCover }}
-      <div class="post-cover cover" style="background-image: url('{{ .Site.Params.postcover | absURL }}');"></div>
-    {{ end }}
-  </div>
-</header>
+{{ partial "header" . }}
 
 <main class="content" role="main">
   <article class="post{{ if .Params.featured }} featured{{ end }}">
     <div class="inner">
       <section class="post-content">{{ .Content }}</section>
 
-      <section class="post-info">
-	{{ partial "post_share" . }}
-        <aside class="post-tags">
-          {{ range .Params.tags }}
-            {{ $tag := . | urlize }}
-            <a href="{{ printf "tags/%s" $tag | absURL }}">{{ . }}</a>
-          {{ end }}
-        </aside>
+      {{ partial "post_info" . }}
 
-        <div class="clear"></div>
-      </section>
-
-      {{ if isset .Params "author" }}
-        <aside class="post-author">
-          <figure class="post-author-avatar avatar">
-          </figure>
-          <div class="post-author-bio">
-            <h4 class="post-author-name">{{ .Params.author }}</h4>
-          </div>
-          <div class="clear"></div>
-        </aside>
-      {{ end }}
+      {{ partial "post_author" . }}
 
       {{/* https://gohugo.io/templates/internal/#disqus */}}
       {{ if .Site.DisqusShortname }}

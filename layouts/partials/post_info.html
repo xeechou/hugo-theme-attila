@@ -1,0 +1,11 @@
+      <section class="post-info">
+	{{ partial "post_share" . }}
+        <aside class="post-tags">
+          {{ range .Params.tags }}
+            {{ $tag := . | urlize }}
+            <a href="{{ printf "tags/%s" $tag | absURL }}">{{ . }}</a>
+          {{ end }}
+        </aside>
+
+        <div class="clear"></div>
+      </section>

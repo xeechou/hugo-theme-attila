@@ -1,0 +1,22 @@
+{{ define "body" }}
+
+<div class="progress-container">
+  <span class="progress-bar"></span>
+</div>
+
+{{ partial "header" . }}
+
+<div id="index" class="container"> <!-- the container added separations for loop -->
+  <main class="content" role="main">
+    <article class="post{{ if .Params.featured }} featured{{ end }}">
+      <div class="inner">
+	<section class="post-content">{{ .Content }}</section>
+	{{ partial "post_author" . }}
+      </div>
+    </article>
+
+  {{ partial "loop" . }}
+  </main>
+</div>
+
+{{ end }}

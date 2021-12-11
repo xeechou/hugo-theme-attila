@@ -19,6 +19,7 @@
     <!-- qr code script -->
     {{ $qrcode := resources.Get "js/qrcode.min.js" }}
     <script src="{{ $qrcode.RelPermalink }}"></script>
+
   </head>
   <body class="{{ cond .IsHome "home-template" "post-template" }}">
     {{ partial "navigation" . }}
