@@ -4,13 +4,25 @@
   <span class="progress-bar"></span>
 </div>
 
+<div class="inner">
+  {{ partial "subnav" . }}
+</div>
+
 <div id="index" class="container">
   <main class="content" role="main">
     <article class="post">
       <div class="inner">
 	<section class="post-content">
+	  {{ $hasCover := isset .Site.Params "cover404" }}
 	  <div>
-	    <h2 id="title">Page Not Found <a href="{{ "/" | relURL }}">Go Home</a></h2>
+	    {{ if $hasCover  }}
+	    <a href="{{ "/" | relURL }}">
+	      <img alt="404" src="{{ .Site.Params.cover404 | absURL }}"/>
+	    </a>
+	    <center><h3>This is not page your are looking for.</h3></center>
+	    {{ else }}
+	    <h2>This is not page you are looking for <a href="{{ "/" | relURL }}">Return Home</a></h2>
+	    {{ end }}
 	  </div>
 	</section>
       </div>
