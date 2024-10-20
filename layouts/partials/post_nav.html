@@ -1,6 +1,6 @@
       <aside class="post-nav">
         <!-- exchange the navigation  -->
-        {{ with .PrevPage }}
+        {{ with .Prev }}
           <a class="post-nav-prev" href="{{ .RelPermalink }}">
             <section class="post-nav-teaser">
               <i class="icon-right-arrow"></i>
@@ -10,7 +10,7 @@
           </a>
         {{ end }}
 
-          {{ with .NextPage }}
+          {{ with .Next }}
           <a class="post-nav-next" href="{{ .RelPermalink }}">
             <section class="post-nav-teaser">
               <i class="icon-left-arrow"></i>
